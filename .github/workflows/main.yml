@@ -1,5 +1,5 @@
 # .github/workflows/**main.yml**
-name: Django-app workflow
+name: yamdb_workflow
 
 on: [push]
 
@@ -60,7 +60,7 @@ jobs:
           uses: docker/build-push-action@v2 
           with:
             push: true
-            tags: dmitrytakoy/infra:latest 
+            tags: dmitrytakoy/yamdb:latest 
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
